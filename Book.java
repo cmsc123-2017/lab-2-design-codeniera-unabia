@@ -13,38 +13,54 @@ class Book {
   /*   Fields:
    *     this.author   -- Author
    *     this.title    -- String
+   *     this.year     -- int
    * 
    *   Methods:
-   * 
+   *     sameAuthor(Book that)     -- boolean
+   *     publishedBefore(Book a)   -- boolean
+   *
    *   Methods of author:
    *     this.author.equals()  -- boolean
    */
   
   // Book -> boolean
-  // Returns true if this Book has the same author
-  // as another book
+  // Accepts this Book
+  // Returns true if this Book has the same author with another book
   boolean sameAuthor(Book that) {    
     return this.author.equals(that.author);
     
     // TEMPLATE
-    /*    this.author
-     *    this.title
-     * 
-     *    //that
-     *    //that.author
-     *    //that.title
+    /*    Fields:
+     *    this.author   -- Author
+     *    this.title    -- String
+     *    this.year     -- int
+     *
+     *    that
+     *    that.author   -- Author
+     *    that.title    -- String
+     *    that.year     -- int
      */
   }
  
-  
-  // TODO design a function publishedBefore that accepts a Book and
-  //   returns true if this Book was published before the other 
-
   // Book -> boolean
   // Accepts this book
   // Returns true if this book was published before the other book
-  boolean publishedBefore(Book a){
-    return a.year > this.year;
+  boolean publishedBefore(Book that){
+    return that.year > this.year;
+    
+    // TEMPLATE
+    /*    
+     *    Fields:
+     *    this.author   -- Author
+     *    this.title    -- String
+     *    this.year     -- year
+     *
+     *    that
+     *    that.author   -- Author
+     *    that.title    -- String
+     *    that.year     -- int
+     *    
+     */
   }
   
 }
