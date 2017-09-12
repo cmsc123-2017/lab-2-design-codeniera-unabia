@@ -8,9 +8,9 @@ class Author {
   }
   
   // TEMPLATE
-  /*   
-   *    this.name
-   *    this.gender
+  /*    Fields:
+   *    this.name     -- String
+   *    this.gender   -- String
    * 
    */
   
