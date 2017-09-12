@@ -30,15 +30,21 @@ class Book {
     /*    this.author
      *    this.title
      * 
-     *    that
-     *    that.author
-     *    that.title
+     *    //that
+     *    //that.author
+     *    //that.title
      */
   }
  
   
   // TODO design a function publishedBefore that accepts a Book and
   //   returns true if this Book was published before the other 
-  
+
+  // Book -> boolean
+  // Accepts this book
+  // Returns true if this book was published before the other book
+  boolean publishedBefore(Book a){
+    return a.year > this.year;
+  }
   
 }

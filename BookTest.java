@@ -1,10 +1,4 @@
 import junit.framework.TestCase;
-
-/**
- * A JUnit test case class.
- * Every method starting with the word "test" will be called when running
- * the test with JUnit.
- */
 public class BookTest extends TestCase {
  
   public void testSameAuthorSame() {
@@ -24,5 +18,19 @@ public class BookTest extends TestCase {
     Book secrets = new Book(rowling, "The Chamber of Secrets", 1998);
     
     assertEquals(true, secrets.sameAuthor(stone));
+  }
+  
+  public void testCompareYear(){
+    Book a = new Book(new Author("Manolo", "M"), "1st Book", 2015);
+    Book b = new Book(new Author("Jai", "F"), "My Book", 2017);
+    
+    assertEquals(true, a.publishedBefore(b));
+    assertEquals(false, b.publishedBefore(a));
+    
+    Book c = new Book(new Author("Manolo", "M"), "2nd Book", 2016);
+    Book d = new Book(new Author("Manolo", "M"), "3rd Book", 2015);
+
+    assertEquals(false, c.publishedBefore(d));
+    assertEquals(true, d.publishedBefore(c));  
   }
 }
